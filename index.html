@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventaris Bengkel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Inventaris Suku Cadang</h1>
+        </header>
+
+        <!-- Form Input -->
+        <section class="input-section">
+            <h3>Input Barang Baru</h3>
+            <form id="inventory-form">
+                <input type="text" id="kode" placeholder="Kode Barang" required>
+                <input type="text" id="nama" placeholder="Nama Suku Cadang" required>
+                <input type="number" id="stok" placeholder="Stok" required>
+                <input type="number" id="harga" placeholder="Harga" required>
+                <button type="submit" id="submit-btn">Simpan Barang</button>
+            </form>
+        </section>
+
+        <hr>
+
+        <section class="display-section">
+            <input type="text" id="search" placeholder="Cari suku cadang...">
+            <div id="loading" class="status">Memuat data...</div>
+            <div class="table-scroll">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kode</th>
+                            <th>Nama</th>
+                            <th>Stok</th>
+                            <th>Harga</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body"></tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
